@@ -1,0 +1,45 @@
+cabal-version:      3.0
+name:               Baruch-Haskell
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             barubdg
+maintainer:         benjamindg@oulook.es
+build-type:         Simple
+
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable Baruch-Haskell
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base >=4.17 && <5.0, sqlite-simple, text
+    hs-source-dirs:   app
+    other-modules:    Cliente.Actualizar
+                    , Cliente.Crear
+                    , Cliente.Eliminar
+                    , Cliente.Leer
+                    , Cliente.Menu
+                    , Vuelo.Actualizar
+                    , Vuelo.Crear
+                    , Vuelo.Eliminar
+                    , Vuelo.Leer
+                    , Vuelo.Menu
+                    , Avion.Actualizar
+                    , Avion.Crear
+                    , Avion.Eliminar
+                    , Avion.Leer
+                    , Avion.Menu
+                    , Reserva.Actualizar
+                    , Reserva.Crear
+                    , Reserva.Eliminar
+                    , Reserva.Leer
+                    , Reserva.Menu
+                    , Asiento.Actualizar
+                    , Asiento.Crear
+                    , Asiento.Eliminar
+                    , Asiento.Leer
+                    , Asiento.Menu
+    default-language: Haskell2010
